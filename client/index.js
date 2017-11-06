@@ -8,24 +8,22 @@ import { ApolloProvider } from "react-apollo";
 import { ThemeProvider } from "react-css-themr";
 import { BrowserRouter } from "react-router-dom";
 
-import { apolloClient, configureStore } from "./base";
+import { apolloClient } from "./base";
 import App from "./modules/app/components/App";
 
 import "./styles/commons.scss";
 import theme from "./styles/theme";
 
 const rootEl = document.getElementById("root");
-const store = configureStore();
+// const store = configureStore();
 
 ReactDOM.render(<Root currentApp={App} />, rootEl);
 
 function Root({ currentApp }) {
   return (
-    <ApolloProvider client={apolloClient} store={store}>
+    <ApolloProvider client={apolloClient}>
       <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          {React.createElement(currentApp)}
-        </BrowserRouter>
+        <BrowserRouter>{React.createElement(currentApp)}</BrowserRouter>
       </ThemeProvider>
     </ApolloProvider>
   );
