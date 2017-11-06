@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ispychange is a platform dedicated to helping nonprofits">
+    <meta name="author" content="julian rogmans">
+
+    <title>I Spy Change</title>
+    <link rel="stylesheet" media="all" href="<%= styles_path %>">
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="text/javascript" src="<%= client_path %>"></script>
+  </body>
+</html>
